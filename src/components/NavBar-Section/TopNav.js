@@ -3,6 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import './TopNav.css';
 
+// Sample data array for categories
+const categories = [
+  { id: 1, title: 'Ladies', image: '2024wk44-home-ladies.avif' },
+  { id: 2, title: 'Mens', image: '2024wk45-home-mens.avif' },
+  { id: 3, title: 'Kids 7-14', image: '2024wk45-home-bigkids.avif' },
+  { id: 4, title: 'Kids 1-7', image: '2024wk45-home-prekids.avif' },
+  { id: 5, title: 'Babies', image: '2024wk45-home-baby.avif' },
+  { id: 6, title: 'Novelty', image: '2024wk43-home-novelty.avif' },
+  { id: 6, title: 'Beauty', image: '2024wk45-home-beauty.avif' },
+  { id: 6, title: 'Get the Scope', image: '2024wk45-home-bf.avif' },
+  // Add more categories as needed
+];
+
 function TopNav() {
   const navOption = [
     "Collabs & License",
@@ -25,9 +38,8 @@ function TopNav() {
   );
 
   return (
-    <><><>
+    <>
       <div className='topNav'>
-        {/* <img src="/mrp-logo.svg" alt="MRP Logo" /> */}
         <img
           src="https://cdn.omni.mrpg.com/cdn/web/assets/images/mrp-logo.svg"
           alt="Mr Price Clothing South Africa"
@@ -60,30 +72,47 @@ function TopNav() {
         <div className='button-container'>
           <button>SHOP LADIES</button>
           <button>SHOP MENS</button>
-
         </div>
       </div>
 
-      <div class="parent">
-        <div class="child"></div>
+      {/* Categories Grid Section */}
+      <div className='categories-grid'>
+        {categories.map((category) => (
+          <div key={category.id} className='category-item'>
+            <img src={category.image} alt={category.title} className='category-image' />
+            <h3 className='category-title'>{category.title}</h3>
+          </div>
+        ))}
       </div>
+
       <div className='options'>
         <div className='ChooseOptions'>
-          <a href="/en_za/customer-service/faqs" data-gtm-event="Campaign" data-gtm-action="Home Page" data-gtm-label="" title="FAQ's"><img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-faq-ic.png" alt="frequently asked questions" width="201" height="138" class="img-fluid" loading="lazy"></img></a>
+          <a href="/en_za/customer-service/faqs" title="FAQ's">
+            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-faq-ic.png" alt="frequently asked questions" />
+          </a>
         </div>
         <div className='ChooseOptions'>
-          <a href="/en_za/customer-service/faqs" data-gtm-event="Campaign" data-gtm-action="Home Page" data-gtm-label="" title="Delivery and returns"><img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-delivery-ic.png" alt="delivery and returns" width="201" height="138" class="img-fluid" loading="lazy"></img></a>
+          <a href="/en_za/customer-service/faqs" title="Delivery and returns">
+            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-delivery-ic.png" alt="delivery and returns" />
+          </a>
         </div>
         <div className='ChooseOptions'>
-          <a href="/en_za/sales/order/history" data-gtm-event="Campaign" data-gtm-action="Home Page" data-gtm-label="" title="Track my order"><img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-track-ic.png" alt="track my order" width="202" height="138" class="img-fluid" loading="lazy"></img></a>
+          <a href="/en_za/sales/order/history" title="Track my order">
+            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-track-ic.png" alt="track my order" />
+          </a>
         </div>
         <div className='ChooseOptions'>
-          <a href="/en_za/store-locator/" data-gtm-event="Campaign" data-gtm-action="Home Page" data-gtm-label="" title="Stores near me"><img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-loc-ic.png" alt="stores near me" width="201" height="138" class="img-fluid" loading="lazy"></img></a>
+          <a href="/en_za/store-locator/" title="Stores near me">
+            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-loc-ic.png" alt="stores near me" />
+          </a>
         </div>
         <div className='ChooseOptions'>
-          <a href="/en_za/customer-service/faqs" data-gtm-event="Campaign" data-gtm-action="Home Page" data-gtm-label="" title="How to shop"><img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-hts-ic.png" alt="how to shop" width="201" height="138" class="img-fluid" loading="lazy"></img></a>
+          <a href="/en_za/customer-service/faqs" title="How to shop">
+            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-hts-ic.png" alt="how to shop" />
+          </a>
         </div>
-      </div></>
+      </div>
+
       <div className='clothingOptions'>
         <p><span>Hook me up with fashion news</span></p>
         <label htmlFor="" className='opt'>All</label>
@@ -96,8 +125,9 @@ function TopNav() {
         <input type="checkbox" />
         <label htmlFor="" className='opt'>Baby</label>
         <input type="checkbox" />
-        <input type="email" name="" id="" />
+        <input type="email" placeholder="Enter your email" />
       </div>
+
       <div className='beforeFooter'>
         <div className='mrp'>
           <div><strong>Mr Price</strong></div>
@@ -138,12 +168,12 @@ function TopNav() {
           <p>Contact Us</p>
         </div>
       </div>
-    </>
-    <div className='differentSocials'>
-      <div><strong>FOLLOW US</strong></div>
-      <p>FAQ's</p>
-      <p className='social'>Contact Us</p>
-    </div>
+
+      <div className='differentSocials'>
+        <div><strong>FOLLOW US</strong></div>
+        <p>FAQ's</p>
+        <p className='social'>Contact Us</p>
+      </div>
     </>
   );
 }
