@@ -2,6 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import './TopNav.css';
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import Footer from '../Footer/Footer';
+
 
 // Sample data array for categories
 const categories = [
@@ -34,7 +41,7 @@ function TopNav() {
   ];
 
   let navItems = navOption.map((e) =>
-    <li key={e}>{e}</li>
+    <li key={e} ><a href="https://www.mrp.com/en_za/ladies">{e}</a></li>
   );
 
   return (
@@ -171,9 +178,23 @@ function TopNav() {
 
       <div className='differentSocials'>
         <div><strong>FOLLOW US</strong></div>
-        <p>FAQ's</p>
-        <p className='social'>Contact Us</p>
+        <p>MR PRICE</p>
+        <div className="social-media">
+          <FaFacebook />
+          <FaXTwitter />
+          <FaInstagram />
+          <FaTiktok />
+          <FaYoutube />
+        </div>
+
+
+        <p className='social'>MR PRICE KIDS</p>
+        <div className="social-media">
+          <FaInstagram />
+          <FaFacebook />
+        </div>
       </div>
+      <Footer/>
     </>
   );
 }

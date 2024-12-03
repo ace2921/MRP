@@ -1,231 +1,236 @@
-*{
-  transition: transform 0.3s ease;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* General reset and universal styling */
+* {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* Top navigation styling */
 .topNav {
-    /* border: 3px solid green; */
-    height: 13vh;
-    background-color: rgb(252, 250, 250);
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    margin-left: -55px;
-    height: 35px;
-    width: 30%;
-  }
-  
-  .search-container {
-    /* border: 3px solid purple; */
-    width: 48%;
+  height: 13vh;
+  background-color: rgb(252, 250, 250);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
-  }
-  
-  .searchbar {
-    height: 45px;
-    width: 100%;
-    border: #999;
-    border-radius: 6px;
+.logo {
+  height: 35px;
+  width: 30%;
+}
 
-  }
-  
-  .search-icon {
-    /* border: 1px solid purple; */
-    position: absolute;
-    left: -10;
-    margin-top: 14px;
-    margin-left: 10px;
-    cursor: pointer;
-    height: 17px;
-    color: #999;
-  }
-  input::placeholder {
-    font-size: 16px; 
-    color: #999; 
-    text-align: right;
-    padding-right: 270px;
-  }
-  
-  nav{
-    /* border: 3px solid blue; */
-    height: 8vh;
-  }
-  .promo{
-    /* border: 3px solid red; */
-    height: 6vh;
-    background-color: black;
-    padding-left: 358px;
-    padding-top: 5px;
-  }
+/* Search bar styling */
+.search-container {
+  width: 48%;
+  position: relative;
+}
 
-  .promoVideo{
-    /* border: 1px solid black; */
-    height: 53vh;
-    display: flex;
-  }
-  .parent {
-    width: 400px; 
-    height: 300px;
-  }
-  
-  .child {
-    width: 100%;
-    height: 100%;
-    /* background-color: black;/ fallback color */
-    background-image: url("https://www.mrp.com/en_za/ladies");
-    background-position: center;
-    background-size: cover;
-  }
-  li{
-    font-size: 14px;
-    display: inline-block;
-    /* border: 1px solid red; */
-    margin-left: 25px;
-    font-weight: 640;
-  }
-   li:hover{
-    color: rgb(224, 56, 56);
-    /* border: rgb(224, 56, 56); */
-  } 
-  
-  .promoMessage{
-    color: #fff;
-    font-size: 16px;
-  }
-  span{
-    font-weight: 700;
-  }
-  video{
-    width: 100%;
-  }
-  .video-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  video {
-    width: 100%;
-    height: auto;
-  }
-  
-  .button-container {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 155px;
-    font-size: 12px;
-  }
-  
-  button:hover {
-    background-color: rgb(77, 74, 74);
-    color: #fff;
-  }
+.searchbar {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding-left: 35px;
+  font-size: 16px;
+  color: #333;
+}
 
-  .options{
-    /* border: 1px solid black; */
-    height: 50vh;
-    padding-left: 60px;
-    padding-right: 60px;
-    display: flex;
-    align-items: center;
-  }
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
 
-.ChooseOptions{
-  /* border: 1px solid black; */
+input::placeholder {
+  color: #999;
+  text-align: right;
+  padding-right: 270px;
+}
+
+/* Navigation bar */
+nav {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 25px;
+  font-weight: 640;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+li:hover {
+  color: rgb(224, 56, 56);
+}
+
+/* Promo section */
+.promo {
+  height: 6vh;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.promoMessage {
+  font-weight: 700;
+}
+
+/* Video and buttons */
+.video-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.button-container {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 155px;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(77, 74, 74);
+  color: #fff;
+}
+
+/* Options and categories */
+.options {
+  height: 50vh;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ChooseOptions {
   height: 25vh;
   width: 20%;
   border-radius: 8px;
-  margin: auto 20px;
+  margin: 20px;
+  transition: background-color 0.3s;
 }
 
-.ChooseOptions:hover{
+.ChooseOptions:hover {
   background-color: rgb(226, 219, 219);
 }
 
-   .clothingOptions{
-    /* border: 1px solid rgb(43, 6, 6); */
-    height: 15vh;
-    background-color: #353C43;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: px;
-  }
-  p{
-    color: #fff;
-  }
-  .opt{
-    color: #fff;
-    font-size: 16px;
-  } 
-  
-.beforeFooter{
-  /* border: 5px solid purple; */
+.clothingOptions {
+  height: 15vh;
+  background-color: #353C43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opt {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Before footer section */
+.beforeFooter {
   height: 75vh;
   display: flex;
-}  
+  gap: 20px;
+}
 
-.mrp{
-  /* border: 2px solid red; */
+.mrp {
   width: 25%;
-  margin: 63px;
-  /* margin-left: ; */
+  margin: 40px;
   height: 40vh;
 }
 
 .mrp p {
   color: #353C43;
-  /* border: 2px solid #353C43; */
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s;
 }
+
 .mrp p:hover {
   color: black;
-
 }
-.differentSocials{
-  /* border: 2px solid black; */
+
+/* Socials */
+.differentSocials {
   height: 35vh;
-  padding-top: 35px;
-  padding-left: 63px;
+  padding: 35px 63px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 
+.differentSocials h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
 }
-.differentSocials div{
-  font-size: 28px;
+
+.social-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.differentSocials p{
-  font-size: 28px;
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
   color: #353C43;
-  display: inline;
-  margin-left: 0px;
-  margin-top: 40px;
+  transition: color 0.3s, transform 0.3s;
 }
-.differentSocials .social{
-  font-size: 28px;
-  color: #353C43;
-  display: inline;
-  margin-left: 130px;
-  
+
+.social-icon:hover {
+  color: #e03838;
+  transform: scale(1.1);
 }
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  padding: 30px;
+}
+
+/* Categories grid */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin: 40px;
 }
@@ -235,7 +240,6 @@
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -246,7 +250,7 @@
 
 .category-image {
   width: 100%;
-  height: 300px; 
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -259,10 +263,13 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   color: white;
   padding: 12px;
-  font-size: 20px; /* Larger font */
+  font-size: 20px;
   font-weight: bold;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
 
-
+hr{
+  width: 95%;
+  margin-left: 20px; 
+}
