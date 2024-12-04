@@ -1,5 +1,10 @@
 import React from 'react';
 import './Footer.css';
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,17 +15,16 @@ const Footer = () => {
           <div className="social-links">
             <div>
               <p>MR PRICE</p>
-              <a href="#"><i className="fa-brands fa-facebook"></i></a>
-              <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
-              <a href="#"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#"><i className="fa-brands fa-tiktok"></i></a>
-              <a href="#"><i className="fa-brands fa-youtube"></i></a>
-              <a href="#"><i className="fa-brands fa-whatsapp"></i></a>
+              <FaFacebook />
+          <FaXTwitter />
+          <FaInstagram />
+          <FaTiktok />
+          <FaYoutube />
             </div>
             <div>
               <p>MR PRICE KIDS</p>
-              <a href="#"><i className="fa-brands fa-facebook"></i></a>
-              <a href="#"><i className="fa-brands fa-instagram"></i></a>
+              <FaInstagram />
+              <FaFacebook />
             </div>
           </div>
         </div>
@@ -28,16 +32,16 @@ const Footer = () => {
 
       <div className="footer-middle">
         <div className="payment-methods">
-          <img src="/images/visa-logo.png" alt="Visa" />
-          <img src="/images/mastercard-logo.png" alt="MasterCard" />
-          <img src="/images/diners-club-logo.png" alt="Diners Club" />
-          <img src="/images/ozow-logo.png" alt="Ozow" />
-          <img src="/images/mrprice-money-logo.png" alt="Mr Price Money" />
-          <img src="/images/cybersource-logo.png" alt="Cybersource" />
+          <img src="/visa.png" alt="Visa" />
+          <img src="/mastercard.webp" alt="MasterCard" />
+          <img src="/Dclub.webp" alt="Diners Club" />
+          <img src="/ozow.png" alt="Ozow" />
+          <img src="/mr_price_money.png" alt="Mr Price Money" />
+          <img src="/cyber.png" alt="Cybersource" />
         </div>
         <div className="app-links">
-          <a href="#"><img src="/images/google-play-badge.png" alt="Google Play" /></a>
-          <a href="#"><img src="/images/app-store-badge.png" alt="App Store" /></a>
+          <a href="#"><img src="https://cdn.omni.mrpg.com/cdn/web/assets/images/google-playstore.svg" alt="Google Play" /></a>
+          <a href="#"><img src="https://cdn.omni.mrpg.com/cdn/web/assets/images/apple-store.svg" alt="App Store" /></a>
         </div>
       </div>
 
@@ -53,7 +57,7 @@ const Footer = () => {
         </div>
         <div className="footer-info">
           <p>© MRP 2024. All rights reserved. MRP Money is a division of the Mr Price Group Ltd and is an authorised Financial Service and Credit Provider. FSP31450 and NCRCP46.</p>
-          <img src="/images/south-africa-flag.png" alt="South Africa Flag" />
+          <img src="https://www.mrp.com/assets/images/flag/za.svg" alt="South Africa Flag" />
         </div>
       </div>
     </footer>
