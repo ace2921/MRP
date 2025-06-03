@@ -36,7 +36,7 @@ function TopNav() {
   ];
 
   let navItems = navOption.map((e) =>
-    <li key={e} ><a href="https://www.mrp.com/en_za/ladies">{e}</a></li>
+    <li key={e} ><a href="">{e}</a></li>
   );
 
   return (
@@ -90,7 +90,7 @@ function TopNav() {
       <div className='options'>
         <div className='ChooseOptions'>
           <a href="/en_za/customer-service/faqs" title="FAQ's">
-            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-faq-ic.png" alt="frequently asked questions" />
+            <img src="/home/austin/Documents/templates/MRP/MRP/public/2025wk04-mrp-homepage-icon-tracking-new.png" alt="frequently asked questions" />
           </a>
         </div>
         <div className='ChooseOptions'>
