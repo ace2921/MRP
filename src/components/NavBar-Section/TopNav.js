@@ -90,27 +90,27 @@ function TopNav() {
       <div className='options'>
         <div className='ChooseOptions'>
           <a href="/en_za/customer-service/faqs" title="FAQ's">
-            <img src="/home/austin/Documents/templates/MRP/MRP/public/2025wk04-mrp-homepage-icon-tracking-new.png" alt="frequently asked questions" />
+            <img src="/2025wk04-mrp-hompage-icon-delivery-new.jpeg" alt="frequently asked questions" />
           </a>
         </div>
         <div className='ChooseOptions'>
           <a href="/en_za/customer-service/faqs" title="Delivery and returns">
-            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-delivery-ic.png" alt="delivery and returns" />
+            <img src="/2025wk04-mrp-hompage-icon-payment-new.jpeg" alt="delivery and returns" />
           </a>
         </div>
         <div className='ChooseOptions'>
           <a href="/en_za/sales/order/history" title="Track my order">
-            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-track-ic.png" alt="track my order" />
+            <img src="/2025wk04-mrp-hompage-icon-tracking-new.png" alt="track my order" />
           </a>
         </div>
         <div className='ChooseOptions'>
           <a href="/en_za/store-locator/" title="Stores near me">
-            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-loc-ic.png" alt="stores near me" />
+            <img src="/2025wk04-mrp-hompage-icon-storefinder-new.jpeg" alt="stores near me" />
           </a>
         </div>
         <div className='ChooseOptions'>
           <a href="/en_za/customer-service/faqs" title="How to shop">
-            <img src="https://cdn.omni.mrpg.com/cdn/01/content/2023/wk16/home-hts-ic.png" alt="how to shop" />
+            <img src="/2025wk04-mrp-hompage-icon-returns-new.jpeg" alt="how to shop" />
           </a>
         </div>
       </div>
@@ -172,6 +172,7 @@ function TopNav() {
       </div>
 
       <Footer/>
+
     </>
   );
 }
